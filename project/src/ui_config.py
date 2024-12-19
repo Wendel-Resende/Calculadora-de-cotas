@@ -16,11 +16,11 @@ QUANTITY_INPUT_CONFIG = {
 
 # UI Text
 TITLE = "Calculadora de Preço Médio"
-DESCRIPTION = "Calcule quantas cotas adicionais você precisa comprar para alcançar o preço médio desejado."
+DESCRIPTION = "Calcule quantas cotas ou ações adicionais você precisa comprar para alcançar o preço médio desejado."
 
 # Input Labels
-CURRENT_PRICE_LABEL = "Preço Atual da Cota"
-CURRENT_QUANTITY_LABEL = "Quantidade Atual de Cotas"
+CURRENT_PRICE_LABEL = "Preço Atual da Cota/Ação"
+CURRENT_QUANTITY_LABEL = "Quantidade Atual de Cotas/Ação"
 CURRENT_AVERAGE_LABEL = "Preço Médio Atual"
 DESIRED_AVERAGE_LABEL = "Preço Médio Desejado"
 CALCULATE_BUTTON_LABEL = "Calcular"
