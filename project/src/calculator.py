@@ -14,7 +14,8 @@ def calculate_new_shares(current_price: float, current_quantity: int,
         desired_average (float): Target average price per share
 
     Returns:
-        str: Message indicating the number of shares to purchase or an error message
+        str: Message indicating the number of shares to purchase and total investment needed,
+             or an error message
     """
     # Validate input
     if desired_average <= current_price:
@@ -27,6 +28,11 @@ def calculate_new_shares(current_price: float, current_quantity: int,
     new_quantity = (total_invested - (current_quantity * desired_average)) / (desired_average - current_price)
 
     if new_quantity > 0:
-        return f"Você precisa comprar {new_quantity:.2f} cotas adicionais."
+        # Calculate total investment needed
+        investment_needed = new_quantity * current_price
+        return (
+            f"Você precisa comprar {new_quantity:.2f} cotas adicionais.\n"
+            f"Investimento necessário: R$ {investment_needed:.2f}"
+        )
     else:
         return "Não é possível alcançar o preço médio desejado com compras ao preço atual."
